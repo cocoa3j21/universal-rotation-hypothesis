@@ -1,0 +1,9 @@
+{
+  "run_id_stage3": "stage3_v2_20261028_agreed_4401_target4pct",
+  "stage3_thresholds_sha256": "a21164371dc01b71c1adf8876f6520c1819f5e14421fd7f073c4d1f14bb69cdd",
+  "filename": "v2_cell_predictions_preregistered.csv",
+  "timestamp_iso": "2026-10-28T00:47:12.352110",
+  "sha256": "cace4b29b67b9963fa1c73383cab564cbc0e184ff3597c58d2a5d499921cfad4",
+  "total_cells": 13608,
+  "vortex_cells": 10206
+}

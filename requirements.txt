@@ -1,0 +1,8 @@
+# gyro_gravity_theory 依存関係
+# 全宇宙回転ジェネレーション仮説 シミュレーション
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.4.0
+pyyaml>=5.4.0
+pytest>=6.2.0
+pytest-cov>=2.12.0

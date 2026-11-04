@@ -1,0 +1,34 @@
+# gyro_gravity_theory/config/params.yaml
+# 全宇宙回転ジェネレーション仮説 シミュレーションパラメータ
+# Universal Rotation Generation Hypothesis — Simulation Parameters
+# ================================================================
+
+# 銀河パラメータ / Galactic Parameters
+galaxy:
+  name: M33
+  M_total_solar: 5e10          # [M_sun] 動的全質量（バルジ+円盤）
+  b_kpc: 2.0                   # [kpc] Plummer半径（バルジ成分）
+  R_d_kpc: 1.5                 # [kpc] 指数円盤スケール長
+  f_disk: 0.8                  # 円盤質量分率（1 - f_disk がバルジ分率）
+
+# 物理定数 / Physical Constants（宇宙論単位系: kpc, km/s, M_sun）
+# G の単位: kpc (km/s)^2 / M_solar → v = sqrt(G*M/r) で直接 km/s が得られる
+physics:
+  G: 4.30091e-6                # kpc (km/s)^2 / M_solar
+  c: 2.99792458e5              # km/s
+  H0: 67.4                     # km/s/Mpc (Planck 2018)
+  hbar: 1.054571817e-34        # J·s (参考値)
+  m_proton: 1.67262192369e-27  # kg (参考値)
+
+# シミュレーション設定 / Simulation Settings
+simulation:
+  r_min_kpc: 1                 # [kpc] 計算開始半径
+  r_max_kpc: 30                # [kpc] 計算終了半径
+  n_points: 200                # 動径グリッド点数
+  S_eff_over_m_kpc_km_s: 500   # [kpc·km/s] 実効スピンパラメータ（加算型用、調整可能）
+
+# モデル設定 / Model Configuration
+model:
+  a0: 1.2e-10                  # [m/s^2] MOND限界加速度 (Milgrom 1983)
+  a0_star: null                # [m/s^2] ジャイロモデル特性加速度（null→c*H0/(2π)で自動計算）
+  mu_type: "standard"          # MOND内挿関数: "simple" | "standard" | "exponential"

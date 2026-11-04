@@ -1,0 +1,12 @@
+{
+  "condition": "Model 2, FWHM=0.2 kpc, sigma_v=0.5 km/s, inc=50 deg",
+  "grid": "oversampled dx=0.01 kpc, downsampled to dpix=0.08 kpc",
+  "dilution_factor": 0.2122,
+  "a50_empirical_kms": 8.797,
+  "a50_analytic_kms": 11.16,
+  "s_max_at_a50_kms": 1.866,
+  "peak_snr_at_a50": 3.733,
+  "inplane_phys_max_kms": 5.1563,
+  "ratio_phys_to_a50": 0.5862,
+  "notes": "面内物理最大振幅はA50の約0.59倍であり単一ピーク検出限界未満"
+}

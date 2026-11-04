@@ -1,0 +1,15 @@
+{
+  "revision_timestamp": "2026-10-27T11:37:51.585602",
+  "csv_path": "D:\\Workspace\\Labs\\universal-rotation-hypothesis\\output\\cell_predictions_revised_v2.csv",
+  "file_size_bytes": 1334166,
+  "sha256_hash": "12263a83d8b821890b7cb03fd963af8fcceffb31ed169e41f2c54c9e4244663d",
+  "total_cells": 9072,
+  "class_breakdown": {
+    "CONTROL": 2268,
+    "RECOVERED": 180,
+    "UNDETECTED": 5625,
+    "BOUNDARY": 999
+  },
+  "evaluable_cells_excluding_boundary": 5805,
+  "revision_reason": "Stage 3\u5408\u610f\u5b8c\u5168\u30d7\u30ed\u30c8\u30b3\u30eb (\u5404\u5c64N_cal=2,000, N_val=2,400\u3001\u8a083,327,156\u8a66\u884c) \u3067\u518d\u8f03\u6b63\u3055\u308c\u305f\u9ad8\u7cbe\u5ea6\u5c64\u5225SNR\u95be\u5024\u304a\u3088\u3073\u7d4c\u9a13\u7684\u6574\u5408\u30d5\u30a3\u30eb\u30bf\u30fc\u7d71\u8a08\u91cf Delta_TS_MF \u306b\u3088\u308b\u6700\u65b0\u4e88\u6e2c\u5024\u3002\u5143\u306e\u4e8b\u524d\u767b\u9332\u30d5\u30a1\u30a4\u30eb (cell_predictions_preregistered.csv) \u306f\u6539\u3056\u3093\u9632\u6b62\u306e\u305f\u3081\u5b8c\u5168\u4fdd\u5168\u3002"
+}

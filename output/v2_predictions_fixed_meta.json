@@ -1,0 +1,8 @@
+{
+  "filename": "v2_predictions_fixed.csv",
+  "timestamp_utc": "2026-10-27T09:16:56.876652",
+  "sha256": "44bd633617a7fd5cc5e2ee6075166a566818dc0aeb73822852712f251cd2d0c1",
+  "total_conditions": 81,
+  "snr_th_v2": 4.5,
+  "r_tol_pix_v2": 2.5
+}

@@ -1,0 +1,1427 @@
+{
+  "script": "tools/generate_final_report_numbers.py",
+  "model_thresholds": {
+    "model_1": {
+      "0.2": {
+        "median": 5.04,
+        "min": 4.8687,
+        "max": 5.0946,
+        "n": 36
+      },
+      "0.5": {
+        "median": 4.7899,
+        "min": 4.2762,
+        "max": 5.0946,
+        "n": 60
+      },
+      "1.0": {
+        "median": 4.522,
+        "min": 4.2762,
+        "max": 5.0946,
+        "n": 60
+      }
+    },
+    "model_2": {
+      "0.2": {
+        "median": 4.7353,
+        "min": 4.5402,
+        "max": 4.8057,
+        "n": 36
+      },
+      "0.5": {
+        "median": 4.4851,
+        "min": 3.8982,
+        "max": 4.8057,
+        "n": 60
+      },
+      "1.0": {
+        "median": 4.2073,
+        "min": 3.8982,
+        "max": 4.8057,
+        "n": 60
+      }
+    },
+    "model_3": {
+      "0.2": {
+        "median": 4.1625,
+        "min": 3.9387,
+        "max": 4.2676,
+        "n": 36
+      },
+      "0.5": {
+        "median": 3.7559,
+        "min": 3.3011,
+        "max": 4.2676,
+        "n": 60
+      },
+      "1.0": {
+        "median": 3.6331,
+        "min": 3.3011,
+        "max": 4.2676,
+        "n": 60
+      }
+    }
+  },
+  "pa_fpr_stats": {
+    "PA=0": {
+      "median": 0.03875,
+      "median_frac": "31/800",
+      "mean": 0.03973,
+      "min": 0.02125,
+      "max": 0.07,
+      "n_strata": 1134
+    },
+    "PA=45": {
+      "median": 0.0375,
+      "median_frac": "30/800",
+      "mean": 0.03783,
+      "min": 0.0225,
+      "max": 0.05625,
+      "n_strata": 1134
+    },
+    "PA=90": {
+      "median": 0.04125,
+      "median_frac": "33/800",
+      "mean": 0.04213,
+      "min": 0.02375,
+      "max": 0.0675,
+      "n_strata": 1134
+    }
+  },
+  "confusion_matrices": {
+    "model_2": {
+      "total_cells": 4536,
+      "boundary_excluded": 168,
+      "eval_n": 4368,
+      "TP": 0,
+      "FP": 0,
+      "FN": 1,
+      "TN": 4367,
+      "accuracy": 0.9998,
+      "negative_rate_baseline": 0.9998,
+      "precision": 0.0,
+      "recall": 0.0,
+      "kappa": "undefined"
+    },
+    "model_3": {
+      "total_cells": 4536,
+      "boundary_excluded": 798,
+      "eval_n": 3738,
+      "TP": 428,
+      "FP": 160,
+      "FN": 8,
+      "TN": 3142,
+      "accuracy": 0.9551,
+      "negative_rate_baseline": 0.8834,
+      "precision": 0.7279,
+      "recall": 0.9817,
+      "kappa": 0.8107
+    }
+  },
+  "fp_breakdown": {
+    "total": 160,
+    "geom_error_true": 111,
+    "geom_error_false": 49,
+    "arm_amplitude": {
+      "0.0": 7,
+      "1.0": 66,
+      "3.0": 87
+    },
+    "inclination": {
+      "30.0": 24,
+      "50.0": 79,
+      "70.0": 57
+    },
+    "arm_method": {
+      "arm_fit": 64,
+      "none": 7,
+      "raw": 35,
+      "remove_k3": 54
+    }
+  },
+  "paired_seed_test": {
+    "condition": "Model 2, FWHM=0.5 kpc, sigma_v=0.5 km/s, inc=50 deg, theta=4.40",
+    "n_pairs": 1000,
+    "hits_both": 52,
+    "hits_neither": 926,
+    "hits_pa0_only": 12,
+    "hits_pa45_only": 10,
+    "fpr_pa0": 0.064,
+    "fpr_pa45": 0.062,
+    "pairwise_agreement_rate": 0.978,
+    "mcnemar_chi2": 0.182
+  },
+  "snr_54strata": [
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 3.541,
+      "snr_eff_nuisance": 3.4828,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.7705,
+      "snr_eff_nuisance": 1.7414,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 0.8852,
+      "snr_eff_nuisance": 0.8707,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 4.5706,
+      "snr_eff_nuisance": 4.492,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 2.2853,
+      "snr_eff_nuisance": 2.246,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.1426,
+      "snr_eff_nuisance": 1.123,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 3.8118,
+      "snr_eff_nuisance": 3.7364,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.9059,
+      "snr_eff_nuisance": 1.8682,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 0.9529,
+      "snr_eff_nuisance": 0.9341,
+      "th_model_fwhm": 5.04,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.4164,
+      "snr_eff_nuisance": 1.3931,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.7082,
+      "snr_eff_nuisance": 0.6966,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.3541,
+      "snr_eff_nuisance": 0.3483,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.8282,
+      "snr_eff_nuisance": 1.7968,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.9141,
+      "snr_eff_nuisance": 0.8984,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.4571,
+      "snr_eff_nuisance": 0.4492,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.5247,
+      "snr_eff_nuisance": 1.4945,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.7624,
+      "snr_eff_nuisance": 0.7473,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.3812,
+      "snr_eff_nuisance": 0.3736,
+      "th_model_fwhm": 4.79,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.7082,
+      "snr_eff_nuisance": 0.6966,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.3541,
+      "snr_eff_nuisance": 0.3483,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.53305,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.177,
+      "snr_eff_nuisance": 0.1741,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.9141,
+      "snr_eff_nuisance": 0.8984,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.4571,
+      "snr_eff_nuisance": 0.4492,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 0.68805,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.2285,
+      "snr_eff_nuisance": 0.2246,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.7624,
+      "snr_eff_nuisance": 0.7473,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.3812,
+      "snr_eff_nuisance": 0.3736,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_1",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.57382,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.1906,
+      "snr_eff_nuisance": 0.1868,
+      "th_model_fwhm": 4.522,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 5.2799,
+      "snr_eff_nuisance": 5.2018,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 2.6399,
+      "snr_eff_nuisance": 2.6009,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.32,
+      "snr_eff_nuisance": 1.3004,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 6.8649,
+      "snr_eff_nuisance": 6.7599,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 3.4324,
+      "snr_eff_nuisance": 3.3799,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.7162,
+      "snr_eff_nuisance": 1.69,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 5.8338,
+      "snr_eff_nuisance": 5.7344,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 2.9169,
+      "snr_eff_nuisance": 2.8672,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 1.4584,
+      "snr_eff_nuisance": 1.4336,
+      "th_model_fwhm": 4.735,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 2.1119,
+      "snr_eff_nuisance": 2.0807,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.056,
+      "snr_eff_nuisance": 1.0404,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.528,
+      "snr_eff_nuisance": 0.5202,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 2.746,
+      "snr_eff_nuisance": 2.704,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.373,
+      "snr_eff_nuisance": 1.352,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.6865,
+      "snr_eff_nuisance": 0.676,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 2.3335,
+      "snr_eff_nuisance": 2.2938,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.1668,
+      "snr_eff_nuisance": 1.1469,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 0.5834,
+      "snr_eff_nuisance": 0.5734,
+      "th_model_fwhm": 4.485,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.056,
+      "snr_eff_nuisance": 1.0404,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.528,
+      "snr_eff_nuisance": 0.5202,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 0.79482,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.264,
+      "snr_eff_nuisance": 0.2601,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.373,
+      "snr_eff_nuisance": 1.352,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.6865,
+      "snr_eff_nuisance": 0.676,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 1.03343,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.3432,
+      "snr_eff_nuisance": 0.338,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.1668,
+      "snr_eff_nuisance": 1.1469,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.5834,
+      "snr_eff_nuisance": 0.5734,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_2",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 0.87821,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.2917,
+      "snr_eff_nuisance": 0.2867,
+      "th_model_fwhm": 4.207,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 20.5266,
+      "snr_eff_nuisance": 19.8951,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 10.2633,
+      "snr_eff_nuisance": 9.9475,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 5.1317,
+      "snr_eff_nuisance": 4.9738,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 26.0808,
+      "snr_eff_nuisance": 25.1811,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 13.0404,
+      "snr_eff_nuisance": 12.5906,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 6.5202,
+      "snr_eff_nuisance": 6.2953,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 19.9149,
+      "snr_eff_nuisance": 19.1143,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 9.9574,
+      "snr_eff_nuisance": 9.5571,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.2,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.30108,
+      "snr_opt_raw": 4.9787,
+      "snr_eff_nuisance": 4.7786,
+      "th_model_fwhm": 4.163,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 8.2107,
+      "snr_eff_nuisance": 7.958,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 4.1053,
+      "snr_eff_nuisance": 3.979,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 2.0527,
+      "snr_eff_nuisance": 1.9895,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 10.4323,
+      "snr_eff_nuisance": 10.0724,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 5.2162,
+      "snr_eff_nuisance": 5.0362,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 2.6081,
+      "snr_eff_nuisance": 2.5181,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 7.966,
+      "snr_eff_nuisance": 7.6457,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 3.983,
+      "snr_eff_nuisance": 3.8229,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 0.5,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 0.75269,
+      "snr_opt_raw": 1.9915,
+      "snr_eff_nuisance": 1.9114,
+      "th_model_fwhm": 3.756,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 4.1053,
+      "snr_eff_nuisance": 3.979,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 2.0527,
+      "snr_eff_nuisance": 1.9895,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 30.0,
+      "s0_l2_kpc": 3.09005,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.0263,
+      "snr_eff_nuisance": 0.9948,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 5.2162,
+      "snr_eff_nuisance": 5.0362,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 2.6081,
+      "snr_eff_nuisance": 2.5181,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "BOUNDARY"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 50.0,
+      "s0_l2_kpc": 3.92616,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.304,
+      "snr_eff_nuisance": 1.2591,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 0.5,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 3.983,
+      "snr_eff_nuisance": 3.8229,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "RECOVERABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 1.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 1.9915,
+      "snr_eff_nuisance": 1.9114,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "UNDETECTABLE"
+    },
+    {
+      "model_id": "model_3",
+      "fwhm_kpc": 1.0,
+      "sigma_v_kms": 2.0,
+      "inc_deg": 70.0,
+      "s0_l2_kpc": 2.99796,
+      "sqrt_a_beam_kpc": 1.50538,
+      "snr_opt_raw": 0.9957,
+      "snr_eff_nuisance": 0.9557,
+      "th_model_fwhm": 3.657,
+      "verdict_final": "UNDETECTABLE"
+    }
+  ],
+  "source_hashes": {
+    "v2_h0_calibration.csv": "6a5334914507dd7e643db163674f86ab850fc725fd0a446639df54e1854044eb",
+    ".v2_snr_thresholds.json": "a21164371dc01b71c1adf8876f6520c1819f5e14421fd7f073c4d1f14bb69cdd",
+    "v2_cell_predictions_preregistered.csv": "cace4b29b67b9963fa1c73383cab564cbc0e184ff3597c58d2a5d499921cfad4",
+    "v2_injection_recovery_summary.csv": "4eeb414a654a9d3eb80594072eab298945589f7dd7ec7893243c5c2c6e071a95",
+    "v2_exact_optimal_snr_54strata.csv": "2ce41763cd287cdd4cc71348884421aa083db30337c5d23fa2364ca4c2514f6d",
+    "v2_audited_optimal_snr_54strata.csv": "940ace7d04b2a5a740fa023d22db44134bb18baee9ef965e25ad59f8823307e2",
+    "v2_method_b_snr_54strata.csv": "fc62be4f40c4e19f7885e7708605e744e15eab92446aadeed798ca5709d2cba1",
+    "v2_oversampled_template_detector_results.json": "7b0a794f4c202bc1bcb8b7a04458f991664eeab3a55227765a2229267866e141",
+    "v2_positive_control_oversampled_result.json": "e7d83c56ecf04a8ebd7c033a0c44101cfcf2d29d62ab0bbf7ef8ca89144b26e6"
+  },
+  "template_detector_oversampled": {
+    "30_deg": {
+      "inc_deg": 30.0,
+      "max_s_fine_kms": 0.8534,
+      "max_s_std_kms": 0.9306,
+      "th_h0_tmf": 4.3644,
+      "rec_rate": 0.324,
+      "ci95_lower": 0.2845,
+      "ci95_upper": 0.3662,
+      "snr_eff_inverted": 3.908,
+      "verdict": "UNDETECTED",
+      "snr_opt_raw": 5.28,
+      "snr_eff_method_b": 4.442,
+      "diff_opt_minus_inv": 1.372,
+      "diff_b_minus_inv": 0.534
+    },
+    "50_deg": {
+      "inc_deg": 50.0,
+      "max_s_fine_kms": 1.094,
+      "max_s_std_kms": 1.2134,
+      "th_h0_tmf": 4.2702,
+      "rec_rate": 0.688,
+      "ci95_lower": 0.6461,
+      "ci95_upper": 0.727,
+      "snr_eff_inverted": 4.76,
+      "verdict": "RECOVERED",
+      "snr_opt_raw": 6.865,
+      "snr_eff_method_b": 5.837,
+      "diff_opt_minus_inv": 2.105,
+      "diff_b_minus_inv": 1.077
+    },
+    "70_deg": {
+      "inc_deg": 70.0,
+      "max_s_fine_kms": 0.8376,
+      "max_s_std_kms": 0.9623,
+      "th_h0_tmf": 4.0805,
+      "rec_rate": 0.382,
+      "ci95_lower": 0.3405,
+      "ci95_upper": 0.4253,
+      "snr_eff_inverted": 3.78,
+      "verdict": "UNDETECTED",
+      "snr_opt_raw": 5.834,
+      "snr_eff_method_b": 5.034,
+      "diff_opt_minus_inv": 2.054,
+      "diff_b_minus_inv": 1.254
+    }
+  },
+  "template_detector_standard_comparison": {
+    "30_deg": {
+      "max_s_std_kms": 0.9306,
+      "rec_rate": 0.382,
+      "ci95": [
+        0.335,
+        0.431
+      ],
+      "snr_eff_inv": 4.1,
+      "verdict": "UNDETECTED"
+    },
+    "50_deg": {
+      "max_s_std_kms": 1.2134,
+      "rec_rate": 0.722,
+      "ci95": [
+        0.676,
+        0.765
+      ],
+      "snr_eff_inv": 4.93,
+      "verdict": "RECOVERED"
+    },
+    "70_deg": {
+      "max_s_std_kms": 0.9623,
+      "rec_rate": 0.482,
+      "ci95": [
+        0.433,
+        0.531
+      ],
+      "snr_eff_inv": 4.14,
+      "verdict": "BOUNDARY (CI includes 50%)"
+    }
+  },
+  "positive_control_oversampled": {
+    "condition": "Model 2, FWHM=0.2 kpc, sigma_v=0.5 km/s, inc=50 deg",
+    "grid": "oversampled dx=0.01 kpc, downsampled to dpix=0.08 kpc",
+    "dilution_factor": 0.2122,
+    "a50_empirical_kms": 8.797,
+    "a50_analytic_kms": 11.16,
+    "s_max_at_a50_kms": 1.866,
+    "peak_snr_at_a50": 3.733,
+    "inplane_phys_max_kms": 5.1563,
+    "ratio_phys_to_a50": 0.5862,
+    "notes": "面内物理最大振幅はA50の約0.59倍であり単一ピーク検出限界未満"
+  },
+  "model_3_stats": {
+    "prediction_recall": 0.9817,
+    "robust_recovery_cells": 539,
+    "evaluated_cells": 3402,
+    "robust_recovery_rate": 0.1584,
+    "xi_inplane": 0.28,
+    "note": "98.2%は事前予測の再現率であり、ロバスト回収率は15.8%にとどまる"
+  },
+  "smoothing_ratios_current": {
+    "model_1": 0.33,
+    "model_2": 0.212,
+    "model_3": 0.32
+  },
+  "model2_oversampled_analysis": {
+    "30": {
+      "inc_deg": 30.0,
+      "max_s_fine_kms": 0.8534,
+      "snr_opt_oversampled": 4.044,
+      "snr_B_oversampled": 3.472,
+      "window_41_energy_ratio": 0.878,
+      "th_h0_tmf": 4.3644,
+      "r_B_oversampled": 0.795,
+      "rec_rate": 0.324,
+      "ci95_lower": 0.2845,
+      "ci95_upper": 0.3662,
+      "snr_eff_inverted": 3.908
+    },
+    "50": {
+      "inc_deg": 50.0,
+      "max_s_fine_kms": 1.094,
+      "snr_opt_oversampled": 5.112,
+      "snr_B_oversampled": 4.37,
+      "window_41_energy_ratio": 0.888,
+      "th_h0_tmf": 4.2702,
+      "r_B_oversampled": 1.023,
+      "rec_rate": 0.688,
+      "ci95_lower": 0.6461,
+      "ci95_upper": 0.727,
+      "snr_eff_inverted": 4.76
+    },
+    "70": {
+      "inc_deg": 70.0,
+      "max_s_fine_kms": 0.8376,
+      "snr_opt_oversampled": 4.009,
+      "snr_B_oversampled": 3.391,
+      "window_41_energy_ratio": 0.892,
+      "th_h0_tmf": 4.0805,
+      "r_B_oversampled": 0.831,
+      "rec_rate": 0.382,
+      "ci95_lower": 0.3405,
+      "ci95_upper": 0.4253,
+      "snr_eff_inverted": 3.78
+    }
+  },
+  "model1_template_detector_result": {
+    "condition": "Model 1, FWHM=0.2 kpc, sigma_v=0.5 km/s, inc=50 deg",
+    "max_s_fine_kms": 0.7331,
+    "th_h0_tmf": 4.6321,
+    "rec_rate": 0.1375,
+    "ci95_lower": 0.1072,
+    "ci95_upper": 0.1747,
+    "snr_eff_inverted": 3.54,
+    "verdict": "UNDETECTED (実測回収率13.8%で確定、50%に届かない)"
+  },
+  "smoothing_ratios_details": {
+    "fwhm_kpc": 0.2,
+    "inc_deg": 50.0,
+    "grid": "oversampled dx=0.01 kpc, downsampled to dpix=0.08 kpc",
+    "ratios": {
+      "model_1": {
+        "a_phys_kms": 2.2226,
+        "s_max_kms": 0.7331,
+        "ratio": 0.33
+      },
+      "model_2": {
+        "a_phys_kms": 5.1563,
+        "s_max_kms": 1.094,
+        "ratio": 0.212
+      },
+      "model_3": {
+        "a_phys_kms": 17.7719,
+        "s_max_kms": 5.6802,
+        "ratio": 0.32
+      }
+    }
+  },
+  "r_b_interpolation": {
+    "standard_grid": {
+      "data_points": [
+        {
+          "inc": 30.0,
+          "r_b": 1.01,
+          "rec_rate": 0.382
+        },
+        {
+          "inc": 70.0,
+          "r_b": 1.203,
+          "rec_rate": 0.482
+        },
+        {
+          "inc": 50.0,
+          "r_b": 1.343,
+          "rec_rate": 0.722
+        }
+      ],
+      "interpolated_r_b_50pct": 1.21,
+      "note": "通常格子基準で50%回収に必要なR_Bは約1.21"
+    },
+    "oversampled_grid": {
+      "data_points": [
+        {
+          "inc": 30.0,
+          "r_b": 0.795,
+          "rec_rate": 0.324
+        },
+        {
+          "inc": 70.0,
+          "r_b": 0.831,
+          "rec_rate": 0.382
+        },
+        {
+          "inc": 50.0,
+          "r_b": 1.023,
+          "rec_rate": 0.688
+        }
+      ],
+      "interpolated_r_b_50pct": 0.91,
+      "note": "超サンプリング基準で50%回収に必要なR_Bは約0.91"
+    },
+    "boundary_verdict_interpretation": "境界帯 (0.85 <= R < 1.15) が50%の位置 (0.91および1.21) を挟んでおり、3点の実測と矛盾しない",
+    "interpretation_detail": {
+      "oversampled_grid": "内挿値 0.91 は境界帯 (0.85 <= R < 1.15) の内側に位置し、境界帯が50%の位置を適切に挟んでいる",
+      "standard_grid": "通常格子の内挿値 1.21 は境界帯の外側 (上側) にあり、旧基準 (R>=1.15を回収可能) は楽観的な分類を与えていた"
+    }
+  },
+  "window_cutoff_details": {
+    "window_size_pixels": "41x41",
+    "energy_ratio_range": [
+      0.878,
+      0.892
+    ],
+    "snr_ratio_range": [
+      0.937,
+      0.944
+    ],
+    "per_inclination": {
+      "30_deg": {
+        "energy_ratio": 0.878,
+        "snr_ratio": 0.937
+      },
+      "50_deg": {
+        "energy_ratio": 0.888,
+        "snr_ratio": 0.942
+      },
+      "70_deg": {
+        "energy_ratio": 0.892,
+        "snr_ratio": 0.944
+      }
+    },
+    "note": "窓打ち切りによる信号制限はエネルギー比で約0.88-0.89、実効SNR比（平方根）で約0.94"
+  },
+  "threshold_sources": {
+    "empirical_mc": {
+      "model_2_fwhm0.2_sv0.5": {
+        "30_deg": 4.3644,
+        "50_deg": 4.2702,
+        "70_deg": 4.0805
+      },
+      "model_1_fwhm0.2_sv0.5": {
+        "50_deg": 4.6321
+      }
+    },
+    "interpolated_extrapolated": "上記以外はビーム数依存性に基づく補間・外挿値 (0.05の倍数)",
+    "insensitivity_note": "比率 R が 0.4 以下の条件は大半を占め、分類 (UNDETECTABLE) は閾値の微小な変動に一切依存しない"
+  },
+  "method_b_reduction_ratio": {
+    "model_2": "通常格子の約 0.67 〜 0.78 倍に低下",
+    "model_1": "通常格子の約 0.87 〜 0.90 倍に低下"
+  },
+  "snr_b_to_inverted_ratio": {
+    "30_deg": {
+      "snr_B": 3.472,
+      "snr_inv": 3.908,
+      "ratio": 0.888
+    },
+    "50_deg": {
+      "snr_B": 4.37,
+      "snr_inv": 4.76,
+      "ratio": 0.918
+    },
+    "70_deg": {
+      "snr_B": 3.391,
+      "snr_inv": 3.78,
+      "ratio": 0.897
+    },
+    "note": "超サンプリングに基準を揃えた後、方法Bは逆算有効SNRの約 0.89 〜 0.92 倍 (約 10% 低め・保守的)"
+  }
+}

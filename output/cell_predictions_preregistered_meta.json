@@ -1,0 +1,15 @@
+{
+  "preregistration_timestamp": "2026-10-27T10:48:54.027792",
+  "csv_path": "D:\\Workspace\\Labs\\universal-rotation-hypothesis\\output\\cell_predictions_preregistered.csv",
+  "file_size_bytes": 1334604,
+  "sha256_hash": "2d230290314165f4c3dc57623a48b4579a013d567c8c9f5e6e01eab1cd6582a4",
+  "total_cells": 9072,
+  "class_breakdown": {
+    "CONTROL": 2268,
+    "RECOVERED": 180,
+    "UNDETECTED": 5625,
+    "BOUNDARY": 999
+  },
+  "evaluable_cells_excluding_boundary": 5805,
+  "pre_registered_pass_criterion": "Consistency Rate >= 90.0% on non-boundary non-control cells"
+}

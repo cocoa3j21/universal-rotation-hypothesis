@@ -1,0 +1,35 @@
+{
+  "30": {
+    "inc_deg": 30.0,
+    "max_s_fine_kms": 0.8534,
+    "max_s_std_kms": 0.9306,
+    "th_h0_tmf": 4.3644,
+    "rec_rate": 0.324,
+    "ci95_lower": 0.2845,
+    "ci95_upper": 0.3662,
+    "snr_eff_inverted": 3.908,
+    "verdict": "UNDETECTED"
+  },
+  "50": {
+    "inc_deg": 50.0,
+    "max_s_fine_kms": 1.094,
+    "max_s_std_kms": 1.2134,
+    "th_h0_tmf": 4.2702,
+    "rec_rate": 0.688,
+    "ci95_lower": 0.6461,
+    "ci95_upper": 0.727,
+    "snr_eff_inverted": 4.76,
+    "verdict": "RECOVERED"
+  },
+  "70": {
+    "inc_deg": 70.0,
+    "max_s_fine_kms": 0.8376,
+    "max_s_std_kms": 0.9623,
+    "th_h0_tmf": 4.0805,
+    "rec_rate": 0.382,
+    "ci95_lower": 0.3405,
+    "ci95_upper": 0.4253,
+    "snr_eff_inverted": 3.78,
+    "verdict": "UNDETECTED"
+  }
+}
