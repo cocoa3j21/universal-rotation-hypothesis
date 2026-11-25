@@ -7,7 +7,8 @@ Zenn 記事「【物理学終了】全宇宙回転ジェネレーション仮説
 
 | リンク | URL |
 | :--- | :--- |
-| **GitHub（公開リポジトリ）** | https://github.com/cocoa3j21/universal-rotation-hypothesis |
+| **GitHub（旧デモ・公開既定）** | [universal-rotation-hypothesis `main`](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/main) — Zenn 初出向けの短いデモ履歴 |
+| **GitHub（Labs 正本・v7）** | [universal-rotation-hypothesis `v7`](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/v7) — 注入回復パイプライン・`output/`・`tools/` 一式 |
 | **Labs 索引（親）** | [`../README.md`](../README.md) |
 | Buy Me a Coffee | https://www.buymeacoffee.com/cocoa3j21 |
 
@@ -15,8 +16,9 @@ Zenn 記事「【物理学終了】全宇宙回転ジェネレーション仮説
 
 | 役割 | 場所 |
 | :--- | :--- |
-| **開発正本** | `D:\Workspace\Labs\universal-rotation-hypothesis\`（`ai-budget-meter` には未収録） |
-| **公開リポジトリ（一本化）** | [cocoa3j21/universal-rotation-hypothesis](https://github.com/cocoa3j21/universal-rotation-hypothesis)（`origin`） |
+| **開発正本（ローカル）** | `D:\Workspace\Labs\universal-rotation-hypothesis\`（`ai-budget-meter` には未収録） |
+| **リモート `origin/main`** | [旧デモ用](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/main) — **上書きしない**（force push 禁止） |
+| **リモート `origin/v7`** | [Labs 正本のミラー](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/v7) — ローカル `main` から push |
 | **巨大成果物** | `output/` の CSV / JSON / PNG（再現用。ハッシュは `output/SHA256SUMS.txt`） |
 | **Zenn 原稿** | [`articles/zenn_article_final.md`](articles/zenn_article_final.md)（frontmatter `published: true` — 公開状態は Zenn 側で要確認） |
 
@@ -69,11 +71,11 @@ python -m pytest -q tests/
 
 | # | 項目 | 状態 |
 | :---: | :--- | :--- |
-| 1 | リモート一本化 | **済** — `origin` = [universal-rotation-hypothesis](https://github.com/cocoa3j21/universal-rotation-hypothesis) |
+| 1 | GitHub 同期方針 | **済（選択肢2）** — 旧デモは `origin/main` のまま、v7 系は **`origin/v7`** に push |
 | 2 | 代表スモーク | **確認済み**（2026-11-25） |
-| 3 | Labs 索引 | 親 [`../README.md`](../README.md) からリンク |
+| 3 | Labs 索引 | 親 [`../README.md`](../README.md) で main / v7 を併記 |
 | 4 | Zenn | 原稿は `articles/`。公開・更新は人手（次フェーズ） |
-| 5 | リモートとの履歴 | ローカル `main` は v7 注入回復系の大規模コミット。**`origin/main` とは unrelated な履歴の可能性あり** — push 時は `--allow-unrelated-histories` マージまたは方針決定が必要（force push 禁止） |
+| 5 | `main` へのマージ | **未実施**（unrelated 履歴のため）。将来マージする場合も force は使わない |
 
 ---
 
