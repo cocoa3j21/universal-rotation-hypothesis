@@ -20,7 +20,7 @@ Zenn 記事「【物理学終了】全宇宙回転ジェネレーション仮説
 | **リモート `origin/main`** | [旧デモ用](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/main) — **上書きしない**（force push 禁止） |
 | **リモート `origin/v7`** | [Labs 正本のミラー](https://github.com/cocoa3j21/universal-rotation-hypothesis/tree/v7) — ローカル `main` から push |
 | **巨大成果物** | `output/` の CSV / JSON / PNG（再現用。ハッシュは `output/SHA256SUMS.txt`） |
-| **Zenn 原稿** | [`articles/zenn_article_final.md`](articles/zenn_article_final.md)（frontmatter `published: true` — 公開状態は Zenn 側で要確認） |
+| **Zenn** | **[公開済み](https://zenn.dev/cocoa3j21/articles/73b0e51ce43de0)**（2026-05-08。ローカル原稿: [`articles/zenn_article_final.md`](articles/zenn_article_final.md)） |
 
 **トーン:** 示唆・玩具モデル・解釈実験。観測データとの一致は**数値遊びの対照**であり、標準宇宙論の代替宣言とはしません。
 
@@ -74,7 +74,7 @@ python -m pytest -q tests/
 | 1 | GitHub 同期方針 | **済（選択肢2）** — 旧デモは `origin/main` のまま、v7 系は **`origin/v7`** に push |
 | 2 | 代表スモーク | **確認済み**（2026-11-25） |
 | 3 | Labs 索引 | 親 [`../README.md`](../README.md) で main / v7 を併記 |
-| 4 | Zenn | 原稿は `articles/`。公開・更新は人手（次フェーズ） |
+| 4 | Zenn | **公開済み** — [記事](https://zenn.dev/cocoa3j21/articles/73b0e51ce43de0)。ローカル原稿は示唆トーン注記を追記（Zenn 本文の人手差し替えは任意） |
 | 5 | `main` へのマージ | **未実施**（unrelated 履歴のため）。将来マージする場合も force は使わない |
 
 ---
