@@ -30,7 +30,7 @@ import numpy as np
 # パッケージインポートのためのパス設定
 # src/ ディレクトリを sys.path に追加
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SRC_DIR = os.path.dirname(SCRIPT_DIR)
+SRC_DIR = os.path.join(SCRIPT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
@@ -557,7 +557,9 @@ def main() -> None:
 
     # --- 5. プロット ---
     print("\nプロット生成中...")
-    save_path = args.output or "../output/rotation_curve_comparison.png"
+    save_path = args.output or os.path.join(
+        SCRIPT_DIR, "output", "rotation_curve_comparison.png"
+    )
     plot_rotation_curves(
         r,
         v_N,

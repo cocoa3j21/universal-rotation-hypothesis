@@ -1,21 +1,83 @@
 # 🌌 全宇宙回転ジェネレーション仮説
 
-**【物理学終了】ダークマターなしで銀河回転曲線を再現するPythonシミュレーション**
+**銀河回転曲線を、ジャイロ比喩モデルで遊ぶ Python シミュレーション（示唆・解釈実験）**
 
-Zenn記事「【物理学終了】全宇宙回転ジェネレーション仮説」で紹介したコードです。
-AIと「ジャイロ効果による重力生成」を議論したら、MOND理論と45桁の増幅率が一致してしまいました。
+Zenn 記事「【物理学終了】全宇宙回転ジェネレーション仮説」で紹介したコードの開発正本です。
+記事タイトルのノリはそのままですが、**数値結果は玩具モデルの対照**として読んでください（宇宙論の「結論」とは書きません）。
 
-## 🚀 実行方法
+| リンク | URL |
+| :--- | :--- |
+| **GitHub（公開リポジトリ）** | https://github.com/cocoa3j21/universal-rotation-hypothesis |
+| **Labs 索引（親）** | [`../README.md`](../README.md) |
+| Buy Me a Coffee | https://www.buymeacoffee.com/cocoa3j21 |
+
+## 開発正本と公開リポジトリ
+
+| 役割 | 場所 |
+| :--- | :--- |
+| **開発正本** | `D:\Workspace\Labs\universal-rotation-hypothesis\`（`ai-budget-meter` には未収録） |
+| **公開リポジトリ（一本化）** | [cocoa3j21/universal-rotation-hypothesis](https://github.com/cocoa3j21/universal-rotation-hypothesis)（`origin`） |
+| **巨大成果物** | `output/` の CSV / JSON / PNG（再現用。ハッシュは `output/SHA256SUMS.txt`） |
+| **Zenn 原稿** | [`articles/zenn_article_final.md`](articles/zenn_article_final.md)（frontmatter `published: true` — 公開状態は Zenn 側で要確認） |
+
+**トーン:** 示唆・玩具モデル・解釈実験。観測データとの一致は**数値遊びの対照**であり、標準宇宙論の代替宣言とはしません。
+
+---
+
+## 代表スモーク（エントリ）
+
+ルートの [`rotation_curve.py`](rotation_curve.py) で、ニュートン / ジャイロ加算 / MOND 補間の 3 曲線を比較します（数十秒程度）。
+
 ```bash
-pip install numpy matplotlib
+cd Labs/universal-rotation-hypothesis   # パスは環境に合わせて調整
+pip install -r requirements.txt
 python rotation_curve.py
 ```
 
-## 📊 出力例
-ニュートン力学（青線）では速度が落ち込むが、ジャイロモデル（赤線）はフラットな回転曲線を再現します。
+**確認（2026-11-25）:** 上記コマンドで終了コード 0。出力例: `v_N (r=10kpc) ≈ 145 km/s`、`v_G ≈ 172`、`v_M ≈ 179`。図は `output/rotation_curve_comparison.png`（`--output` で変更可）。
+
+> `config/params.yaml` の読み込みで Windows ロケールにより警告が出る場合があります。そのときはスクリプト内デフォルト値で続行します（スモーク目的なら許容）。
+
+---
+
+## フルパイプライン（参考）
+
+| 層 | パス | 内容 |
+| :--- | :--- | :--- |
+| ライブラリ | `src/gyro_gravity_theory/` | コア計算・注入回復パイプライン |
+| 一括ツール | `tools/` | キャリブレーション・バッチ・監査スクリプト |
+| 仕様・監査 | `docs/` | 実装計画・監査メモ |
+| テスト | `tests/` | `pytest`（パイプライン系） |
+
+フル再現は時間・ディスクを要します。まずは代表スモーク、必要に応じて `tools/run_v2_full_pipeline.py` 等を README や `docs/` から選んでください。
+
+```bash
+python -m pytest -q tests/
+```
+
+---
+
+## 出力例（README 用・ルート）
+
+ニュートン力学（青線）では速度が落ち込むが、ジャイロモデル（赤線）はフラットな回転曲線を**示すプロット**になります。
 
 ![rotation_curve.png](rotation_curve.png)
 
+---
+
+## 今後の予定
+
+| # | 項目 | 状態 |
+| :---: | :--- | :--- |
+| 1 | リモート一本化 | **済** — `origin` = [universal-rotation-hypothesis](https://github.com/cocoa3j21/universal-rotation-hypothesis) |
+| 2 | 代表スモーク | **確認済み**（2026-11-25） |
+| 3 | Labs 索引 | 親 [`../README.md`](../README.md) からリンク |
+| 4 | Zenn | 原稿は `articles/`。公開・更新は人手（次フェーズ） |
+| 5 | リモートとの履歴 | ローカル `main` は v7 注入回復系の大規模コミット。**`origin/main` とは unrelated な履歴の可能性あり** — push 時は `--allow-unrelated-histories` マージまたは方針決定が必要（force push 禁止） |
+
+---
+
 ## ☕ Support
-この手の妄想検証を続けるためのコーヒー代をいただけると嬉しいです。
+
+この手の妄想検証を続けるためのコーヒー代をいただけると嬉しいです。  
 👉 [Buy Me a Coffee](https://www.buymeacoffee.com/cocoa3j21)
