@@ -74,7 +74,7 @@ python -m pytest -q tests/
 | 1 | GitHub 同期方針 | **済（選択肢2）** — 旧デモは `origin/main` のまま、v7 系は **`origin/v7`** に push |
 | 2 | 代表スモーク | **確認済み**（2026-11-25） |
 | 3 | Labs 索引 | 親 [`../README.md`](../README.md) で main / v7 を併記 |
-| 4 | Zenn | **公開済み** — [記事](https://zenn.dev/cocoa3j21/articles/73b0e51ce43de0)。ローカル原稿は示唆トーン注記を追記（Zenn 本文の人手差し替えは任意） |
+| 4 | Zenn | **公開済み** — [記事](https://zenn.dev/cocoa3j21/articles/73b0e51ce43de0)。§4–§6 は [`articles/zenn_sections_4_6_editor_paste.md`](articles/zenn_sections_4_6_editor_paste.md) をエディタへコピー（**ログイン必須・未同期なら公開本文は旧版のまま**） |
 | 5 | `main` へのマージ | **未実施**（unrelated 履歴のため）。将来マージする場合も force は使わない |
 
 ---

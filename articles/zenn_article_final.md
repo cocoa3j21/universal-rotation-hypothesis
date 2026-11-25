@@ -232,4 +232,4 @@ v7 リポジトリには注入回復パイプラインなど**別レイヤの数
 
 ---
 
-**Zenn エディタ差し替えメモ:** 公開 URL は変更不要。§4〜§6 だけを本ファイル該当見出しからコピーして上書きすれば、ローカル最終稿と公開記事のトーンを揃えられる。
+**Zenn エディタ差し替え:** 見出しレベル `###` 付きの全文は [`zenn_sections_4_6_editor_paste.md`](zenn_sections_4_6_editor_paste.md)。編集 URL: `https://zenn.dev/cocoa3j21/articles/73b0e51ce43de0/edit`（要ログイン）。
